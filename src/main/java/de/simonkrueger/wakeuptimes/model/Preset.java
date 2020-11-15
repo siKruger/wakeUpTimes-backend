@@ -1,6 +1,8 @@
 package de.simonkrueger.wakeuptimes.model;
 
 
+import lombok.Getter;
+import lombok.Setter;
 import org.apache.tomcat.jni.Local;
 
 import javax.persistence.Entity;
@@ -14,14 +16,14 @@ public class Preset {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
-    String presetName;
+    @Getter @Setter long id;
+    @Getter @Setter String presetName;
 
-    LocalTime montag;
-    LocalTime dienstag;
-    LocalTime mittwoch;
-    LocalTime donnerstag;
-    LocalTime freitag;
-    LocalTime samstag;
-    LocalTime sonntag;
+    @Getter @Setter LocalTime montag;
+    @Getter @Setter LocalTime dienstag;
+    @Getter @Setter LocalTime mittwoch;
+    @Getter @Setter LocalTime donnerstag;
+    @Getter @Setter LocalTime freitag;
+    @Getter @Setter LocalTime samstag;
+    @Getter @Setter LocalTime sonntag;
 }
